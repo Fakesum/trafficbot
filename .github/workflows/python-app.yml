@@ -23,7 +23,7 @@ jobs:
         python-version: "3.10"
     - name: Install dependencies
       run: |
-        pip install seleniumbase
+        pip install seleniumbase build
         seleniumbase get chromedriver
         sudo chmod 777 build.sh
         ./build.sh
