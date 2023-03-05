@@ -9,7 +9,7 @@ def give_traffic(url: str, out_link:str, loops: int = 1) -> None:
         driver: BaseCase = driver
         driver.generate_traffic(url, out_link, loops=loops)
 
-def generate_views_shorts(code: str, n_threads: int = 1):
+def generate_views_shorts(code: str, n_threads: int = 1, time_sleep: int = 100):
     def run_time():
         with SB(uc=True) as driver:
             driver: BaseCase = driver
@@ -18,3 +18,5 @@ def generate_views_shorts(code: str, n_threads: int = 1):
                 time.sleep(1)
     for _ in range(n_threads):
         threading.Thread(target=run_time).start()
+
+    time.sleep(time_sleep)
