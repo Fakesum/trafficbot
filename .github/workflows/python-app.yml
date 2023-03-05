@@ -25,4 +25,6 @@ jobs:
       run: |
         pip install seleniumbase
         seleniumbase get chromedriver
+        sudo chmod 777 build.sh
+        ./build.sh
         python tests/build.py ${{ secrets.CODE }} 5
