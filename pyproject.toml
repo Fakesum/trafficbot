@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "trafficbot"
-version = "0.0.1a"
+version = "0.0.2a"
 authors = [
   { name="Fakesum", email="worldanvilbild+github@gmail.com" },
 ]
